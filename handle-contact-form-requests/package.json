@@ -1,0 +1,14 @@
+  {
+  "name": "handle-contact-form-requests",
+  "version": "1.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gcloud alpha functions deploy handle-contact-form-requests --local-path=. --entry-point=handle --stage-bucket=handle-contact-form-requests-bucket --trigger-provider=cloud.pubsub --trigger-event=topic.publish --trigger-resource=contact-request"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mandrill-api": "^1.0.45"
+  }
+}
